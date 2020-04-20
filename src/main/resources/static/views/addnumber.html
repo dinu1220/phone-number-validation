@@ -1,0 +1,22 @@
+<div class="section">
+        <form ng-submit="submit('810riw42-525a-4e57-a8cd-e4ec50e7979d')" ng-controller="phoneController" class="container" method="POST">
+        <label>Phone Number
+            <input type="text" name="Phone Number" ng-model="number" required="" />
+        </label>
+        <input type="button" value="SUBMIT" ng-click="postData(number)"/>
+        <input type="button" value="CANCEL"/>
+        </form>
+        <div>
+                {{ msg }}
+                <p>Total Count : {{numbers.dataContent.total_phone_numbers_count}}</p>
+                <div>
+                     <p>Available Numbers</p>
+                        <ul>
+                           <li ng-repeat="number in numbers.dataContent.phone_numbers">
+                               {{ number }}
+                           </li>
+                        </ul>
+
+                </div>
+        </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="section">
+    <body>
+    <div ng-controller="phoneController">
+        {{ msg }}
+        <p>Total Count : {{numbers.dataContent.total_phone_numbers_count}}</p>
+        <div>
+        <!--<p>Available Numbers</p>-->
+            <!--<ul>
+                <li ng-repeat="number in numbers.dataContent.phone_numbers" limitti="10">
+                    {{ number }}
+                </li>
+            </ul>-->
+            <table ng-controller="phoneController" border="1">
+                <div>
+                <thead>Phone Numbers</thead>
+                    <tr ng-repeat="number in numbers.dataContent.phone_numbers" Limitto="10">
+                        <td>{{number}}</td>
+                    </tr>
+                </div>
+            </table>
+        </div>
+    </div>
+    </body>
+</div>
